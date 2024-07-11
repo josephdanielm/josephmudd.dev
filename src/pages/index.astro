@@ -30,138 +30,116 @@ const work = await Promise.all(
 
 <PageLayout title={HOME.TITLE} description={HOME.DESCRIPTION}>
   <Container>
-    <h4 class="animate font-semibold text-black dark:text-white">
-      Hi, I'm Joseph
-    </h4>
-    <div class="space-y-16">
-      <section>
-        <article class="space-y-4">
-          <p class="animate">
-            I'm a frontend developer based in Lafayette, Louisiana. My journey
-            into web development has always been driven by a passion for
-            problem-solving and technology.
-          </p>
-          <p class="animate">
-            In 2020, I made the difficult decision to leave college when I
-            realized I didn't learn concepts like most people traditionally do.
-            I later discovered this was due to ADHD. Instead of seeing this as a
-            setback, I embraced it as a strength; ADHD fuels my continuous
-            thirst for knowledge, and creative problem-solving. I took up a job
-            waiting tables and embarked on a self-taught journey to complete <Link
-              href="https://www.theodinproject.com/"
-              aria-label="Link to The Odin Project's Homepage"
-              external>The Odin Project</Link
-            >'s full-stack JavaScript program.
-          </p>
-          <p class="animate">
-            This path has given me an opportunity to develop fantastic Front-end
-            fundamentals, learn from other developers, greatly build my
-            organizational skills (with the help of <Link
-              href="https://www.obsidian.md/"
-              aria-label="Link to Obsidian's Homepage"
-              external>Obsidian</Link
-            >, which I highly recommend), and strengthened my confidence as a
-            developer. Understanding and leveraging my unique strengths has
-            fueled my passion for continuous growth and creative innovation.
-          </p>
-          <p class="animate">
-            At Vibrandt, I've built and maintained over 50 websites, designed
-            client dashboards, implemented custom and complex CSS animations,
-            initiated the implementation of new technologies to improve
-            efficiency, and written creative JS scripts to swiftly tackle
-            complex problems. Closely collaborating with developers and
-            designers, I excel at creating user-friendly, accessible, and
-            responsive interfaces, as well as innovating creative solutions
-            using strong technical fundamentals.
-          </p>
-          <p class="animate">
-            I look forward to continuing to leverage my technical skills,
-            creativity, and problem-solving abilities to build innovative and
-            efficient web solutions. My journey in web development is far from
-            over, and I am excited about the endless possibilities and
-            opportunities that lie ahead.
-          </p>
-        </article>
-      </section>
-      <div class="space-y-16">
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap gap-y-2 items-center justify-between">
-            <h5 class="font-semibold text-black dark:text-white">
-              Work Experience
-            </h5>
-            <Link href="/work"> See all work </Link>
-          </div>
-          <ul class="flex flex-col space-y-4">
-            {
-              work.map((entry) => (
-                <li>
-                  <div class="text-sm opacity-75">
-                    {dateRange(entry.data.dateStart, entry.data.dateEnd)}
-                  </div>
-                  <div class="font-semibold text-black dark:text-white">
-                    {entry.data.company}
-                  </div>
-                  <div class="text-sm opacity-75">{entry.data.role}</div>
-                  <article>
-                    <entry.Content />
-                  </article>
-                </li>
-              ))
-            }
-          </ul>
-        </section>
-
-        <section class="animate space-y-6">
-          <div class="flex flex-wrap gap-y-2 items-center justify-between">
-            <h5 class="font-semibold text-black dark:text-white">
-              Recent projects
-            </h5>
-            <Link href="/projects"> See all projects </Link>
-          </div>
-          <ul class="flex flex-col gap-4">
-            {
-              projects.map((project) => (
-                <li>
-                  <ArrowCard entry={project} />
-                </li>
-              ))
-            }
-          </ul>
-        </section>
-
-        <section class="animate space-y-4">
-          <h5 class="font-semibold text-black dark:text-white">
-            Let's Connect
+    <section>
+      <article class="space-y-8">
+        <p class="animate font-semibold text-black dark:text-white">
+          Front-end developer based in Lafayette, Louisiana.
+        </p>
+        <p class="animate">
+          In 2023, I was waiting tables when I decided to start <Link
+            href="https://www.theodinproject.com/"
+            aria-label="Link to The Odin Project's Homepage"
+            external>The Odin Project</Link
+          >'s full-stack Javascript curriculum. I was attracted to the program's
+          demanding, project-heavy, and self-directed approach.
+        </p>
+        <p class="animate">
+          Much like <Link
+            href="https://historiska.se/norse-mythology/odin-en/#:~:text=But%20he%20wanted%20to%20know,him"
+            aria-label="Link to a page detailing the Norse God Odin's thirst for knowledge"
+            external>The Odin Project's mascot</Link
+          >, I recognized that, although I have access to a wealth of knowledge
+          at a whim, it is precisely within the cozy confines of this abundance
+          that one stagnates. The highly intimidating volume of concepts before
+          me traced a long, arduous path that I <i>knew</i> was worth trekking. 5+
+          courses, 140+ lessons, and 20+ projects later, I posses <b>strong</b> fundamentals
+          in HTML, CSS, and JavaScript, and a solid grasp of Version Control (Git),
+          Test-Driven-Development (Jest), and UI/UX Libraries (React).
+        </p>
+        <p class="animate">
+          I've come a long way, but my journey in web development is just
+          beginning. I'm eager for opportunities to continue honing my technical
+          skills and creativity to contribute, innovate, and grow in
+          environments with like-minded developers.
+        </p>
+      </article>
+    </section>
+    <div class="space-y-16 pt-8">
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between pt-8">
+          <h5 class="font-semibold text-black dark:text-white space-y-16">
+            Work Experience
           </h5>
-          <article>
-            <p>If you'd like to get in touch, send me an email.</p>
-          </article>
-          <ul class="flex flex-wrap gap-2">
-            {
-              SOCIALS.map((SOCIAL) => (
-                <li class="flex gap-x-2 text-nowrap">
-                  <Link
-                    href={SOCIAL.HREF}
-                    external
-                    aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
-                  >
-                    {SOCIAL.NAME}
-                  </Link>
-                  {"/"}
-                </li>
-              ))
-            }
-            <li class="line-clamp-1">
-              <Link
-                href={`mailto:${SITE.EMAIL}`}
-                aria-label={`Email ${SITE.NAME}`}
-              >
-                {SITE.EMAIL}
-              </Link>
-            </li>
-          </ul>
-        </section>
-      </div>
+          <Link href="/work"> See all work </Link>
+        </div>
+        <ul class="flex flex-col space-y-4">
+          {
+            work.map((entry) => (
+              <li>
+                <div class="text-sm opacity-75">
+                  {dateRange(entry.data.dateStart, entry.data.dateEnd)}
+                </div>
+                <div class="font-semibold text-black dark:text-white">
+                  {entry.data.company}
+                </div>
+                <div class="text-sm opacity-75">{entry.data.role}</div>
+                <article>
+                  <entry.Content />
+                </article>
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="animate space-y-6">
+        <div class="flex flex-wrap gap-y-2 items-center justify-between">
+          <h5 class="font-semibold text-black dark:text-white">
+            Recent projects
+          </h5>
+          <Link href="/projects"> See all projects </Link>
+        </div>
+        <ul class="flex flex-col gap-4">
+          {
+            projects.map((project) => (
+              <li>
+                <ArrowCard entry={project} />
+              </li>
+            ))
+          }
+        </ul>
+      </section>
+
+      <section class="animate space-y-4">
+        <h5 class="font-semibold text-black dark:text-white">Let's Connect</h5>
+        <article>
+          <p>If you'd like to get in touch, send me an email.</p>
+        </article>
+        <ul class="flex flex-wrap gap-2">
+          {
+            SOCIALS.map((SOCIAL) => (
+              <li class="flex gap-x-2 text-nowrap">
+                <Link
+                  href={SOCIAL.HREF}
+                  external
+                  aria-label={`${SITE.NAME} on ${SOCIAL.NAME}`}
+                >
+                  {SOCIAL.NAME}
+                </Link>
+                {"/"}
+              </li>
+            ))
+          }
+          <li class="line-clamp-1">
+            <Link
+              href={`mailto:${SITE.EMAIL}`}
+              aria-label={`Email ${SITE.NAME}`}
+            >
+              {SITE.EMAIL}
+            </Link>
+          </li>
+        </ul>
+      </section>
     </div>
   </Container>
 </PageLayout>

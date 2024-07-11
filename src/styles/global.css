@@ -19,13 +19,13 @@ body {
 body {
   @apply font-sans antialiased;
   @apply flex flex-col;
-  @apply bg-gray-100 dark:bg-gray-900;
+  @apply bg-slate-100 dark:bg-slate-900;
   @apply text-black/50 dark:text-white/75;
 }
 
 header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-gray-400/75 dark:bg-gray-950/25;
+  @apply bg-gray-300/75 dark:bg-gray-700/25;
   @apply backdrop-blur-sm saturate-100;
 }
 
