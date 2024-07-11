@@ -180,7 +180,7 @@ createCollectionToGlobResultMap({
 });
 
 let lookupMap = {};
-lookupMap = {"work":{"type":"content","entries":{"vibrandt":"/src/content/work/vibrandt.md"}},"projects":{"type":"content","entries":{"weather-app":"/src/content/projects/weather-app/index.md","resume-wizard":"/src/content/projects/resume-wizard/index.md"}}};
+lookupMap = {"work":{"type":"content","entries":{"vibrandt":"/src/content/work/vibrandt.md"}},"projects":{"type":"content","entries":{"resume-wizard":"/src/content/projects/resume-wizard/index.md","weather-app":"/src/content/projects/weather-app/index.md"}}};
 
 function createGlobLookup(glob) {
 	return async (collection, lookupId) => {

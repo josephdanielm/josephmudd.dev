@@ -3,7 +3,7 @@ import 'kleur/colors';
 /* empty css                         */
 import { clsx } from 'clsx';
 import { twMerge } from 'tailwind-merge';
-import { S as SITE } from './consts_DAgLmvBM.mjs';
+import { S as SITE } from './consts_aI_Azcuc.mjs';
 
 const inter400 = "/_astro/inter-latin-400-normal.BT1H-PT_.woff2";
 

@@ -1,8 +1,8 @@
 /* empty css                         */
 import { n as createComponent, o as renderTemplate, t as renderComponent, p as maybeRenderHead } from './astro/server_Bs8d6JLF.mjs';
 import 'kleur/colors';
-import { g as getCollection, P as PROJECTS } from './consts_DAgLmvBM.mjs';
-import { $ as $$Container, a as $$PageLayout } from './PageLayout_D7s8mK8a.mjs';
+import { g as getCollection, P as PROJECTS } from './consts_aI_Azcuc.mjs';
+import { $ as $$Container, a as $$PageLayout } from './PageLayout_CkD1XOMr.mjs';
 import { $ as $$ArrowCard } from './ArrowCard_DGB8ZtVm.mjs';
 
 const $$Index = createComponent(async ($$result, $$props, $$slots) => {
