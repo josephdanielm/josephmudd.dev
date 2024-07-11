@@ -11,6 +11,7 @@ import nodePath from 'node:path';
 import buffer from 'node:buffer';
 import crypto from 'node:crypto';
 import { onRequest } from './_noop-middleware.mjs';
+import { AstroCookies } from 'astro';
 
 function shouldAppendForwardSlash(trailingSlash, buildFormat) {
   switch (trailingSlash) {
