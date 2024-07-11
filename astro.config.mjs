@@ -8,5 +8,7 @@ export default defineConfig({
   site: "https://astro-nano-demo.vercel.app",
   integrations: [mdx(), sitemap(), tailwind()],
   output: "server",
-  adapter: vercel(),
+  adapter: vercel({
+    webAnalytics: { enabled: true }
+  }),
 });
