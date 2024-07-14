@@ -30,13 +30,14 @@ body {
   @apply antialiased;
   @apply flex flex-col;
   @apply bg-slate-100 dark:bg-slate-900;
-  @apply text-black/50 dark:text-white/75;
+  @apply text-black/80 dark:text-white/80;
   font-family: "wotfardregular";
 }
 
 header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
   @apply bg-gray-300/75 dark:bg-gray-700/25;
+  @apply text-black/80 dark:text-white;
   @apply backdrop-blur-sm saturate-100;
 }
 
