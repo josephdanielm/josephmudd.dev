@@ -79,6 +79,7 @@ const { title, description, image = "/nano.png" } = Astro.props;
     preloadTheme();
     onScroll();
     animate();
+    handleThemeButtons();
 
     const backToTop = document.getElementById("back-to-top");
     backToTop?.addEventListener("click", (event) => scrollToTop(event));
@@ -131,6 +132,19 @@ const { title, description, image = "/nano.png" } = Astro.props;
     }
   }
 
+  function handleThemeButtons() {
+    const lightButton = document.getElementById("light-theme-button");
+    const darkButton = document.getElementById("dark-theme-button");
+
+    if (document.documentElement.classList.contains("dark")) {
+      lightButton.style.display = "flex";
+      darkButton.style.display = "none";
+    } else {
+      lightButton.style.display = "none";
+      darkButton.style.display = "flex";
+    }
+  }
+
   function scrollToTop(event) {
     event.preventDefault();
     window.scrollTo({
@@ -169,21 +183,11 @@ const { title, description, image = "/nano.png" } = Astro.props;
 
   function preloadTheme() {
     const userTheme = localStorage.theme;
-    const lightButton = document.getElementById("light-theme-button");
-    const darkButton = document.getElementById("dark-theme-button");
 
     if (userTheme === "light" || userTheme === "dark") {
       toggleTheme(userTheme === "dark");
     } else {
       toggleTheme(true);
-    }
-
-    if (userTheme === "dark") {
-      lightButton.style.display = "flex";
-      darkButton.style.display = "none";
-    } else {
-      lightButton.style.display = "none";
-      darkButton.style.display = "flex";
     }
   }
 
