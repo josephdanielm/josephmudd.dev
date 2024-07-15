@@ -90,12 +90,16 @@ const { title, description, image = "/nano.png" } = Astro.props;
     lightThemeButton?.addEventListener("click", () => {
       localStorage.setItem("theme", "light");
       toggleTheme(false);
+      lightThemeButton.style.display = "none";
+      darkThemeButton.style.display = "flex";
     });
 
     const darkThemeButton = document.getElementById("dark-theme-button");
     darkThemeButton?.addEventListener("click", () => {
       localStorage.setItem("theme", "dark");
       toggleTheme(true);
+      lightThemeButton.style.display = "flex";
+      darkThemeButton.style.display = "none";
     });
 
     window
@@ -165,11 +169,21 @@ const { title, description, image = "/nano.png" } = Astro.props;
 
   function preloadTheme() {
     const userTheme = localStorage.theme;
+    const lightButton = document.getElementById("light-theme-button");
+    const darkButton = document.getElementById("dark-theme-button");
 
     if (userTheme === "light" || userTheme === "dark") {
       toggleTheme(userTheme === "dark");
     } else {
-      toggleTheme(window.matchMedia("(prefers-color-scheme: dark)").matches);
+      toggleTheme(true);
+    }
+
+    if (userTheme === "dark") {
+      lightButton.style.display = "flex";
+      darkButton.style.display = "none";
+    } else {
+      lightButton.style.display = "none";
+      darkButton.style.display = "flex";
     }
   }
 
