@@ -1,8 +1,5 @@
-# My Personal Website
+# josephmudd.dev
 
-<img alt="josephmudd.dev Graphic" src="/josephmudd-dev-graphic.png" />
-
-## Overview
 
 <a href="https://josephmudd.dev">**josephmudd.dev**</a> is my personal portfolio website.
 
