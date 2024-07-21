@@ -15,6 +15,7 @@
 html {
   overflow-y: scroll;
   color-scheme: light;
+  overscroll-behavior: none;
 }
 
 html.dark {
@@ -30,40 +31,43 @@ body {
   @apply antialiased;
   @apply flex flex-col;
   @apply bg-slate-100 dark:bg-slate-900;
-  @apply text-black/80 dark:text-white/80;
+  @apply text-slate-950/80 dark:text-slate-50/80;
   font-family: "wotfardregular";
 }
 
 header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-gray-300/75 dark:bg-gray-700/25;
-  @apply text-black/80 dark:text-white;
+  @apply bg-slate-100/80 dark:bg-slate-900/80;
+  @apply text-slate-950/80 dark:text-slate-50;
   @apply backdrop-blur-sm saturate-100;
 }
 
 main {
-  @apply flex-1 py-32;
+  @apply flex-1 py-32 relative;
 }
 
 footer {
   @apply py-5 text-sm;
+  @apply bg-slate-100/80 dark:bg-slate-900/80;
 }
 
 article {
   @apply max-w-full prose dark:prose-invert prose-img:mx-auto prose-img:my-auto;
   @apply prose-headings:font-semibold;
-  @apply prose-headings:text-black prose-headings:dark:text-white;
+  @apply prose-headings:text-slate-950 prose-headings:dark:text-slate-50;
 }
 
 @layer utilities {
   article a {
     @apply text-current underline underline-offset-2;
-    @apply decoration-black/15 dark:decoration-white/30;
+    @apply decoration-slate-950/30 dark:decoration-slate-50/30;
     @apply transition-colors duration-300 ease-in-out;
   }
   article a:hover {
-    @apply text-black dark:text-white;
-    @apply decoration-black/25 dark:decoration-white/50;
+    @apply text-slate-950 dark:text-white;
+    @apply hover:decoration-slate-950/50 hover:dark:decoration-slate-50/50;
+    @apply hover:text-slate-950 hover:dark:text-slate-50;
+    @apply decoration-slate-950/25 dark:decoration-white/50;
   }
 }
 
@@ -82,4 +86,21 @@ html #back-to-top {
 
 html.scrolled #back-to-top {
   @apply opacity-100 pointer-events-auto;
+}
+
+main {
+  @apply bg-topography-light dark:bg-topography-dark;
+  background-repeat: repeat;
+  background-size: 500px;
+}
+
+.content-background {
+  @apply mx-auto max-w-screen-sm px-5;
+  @apply bg-slate-100/75 dark:bg-slate-900/85;
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
 }

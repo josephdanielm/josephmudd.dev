@@ -10,7 +10,7 @@ repoURL: "https://github.com/josephdanielm/josephmudd.dev"
 
 ## Overview
 
-<a href="https://josephmudd.dev">**josephmudd.dev**</a> is my personal portfolio website.
+<a href="https://josephmudd.dev">josephmudd.dev</a> is my personal portfolio website.
 
 The site, adapted from an <a href="https://astro.build/" target="_blank">Astro</a> theme, provides a clean, professional, and accessible space for potential employers and collaborators to contact me and view my projects and experience.
 
