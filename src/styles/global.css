@@ -37,7 +37,7 @@ body {
 
 header {
   @apply fixed top-0 left-0 right-0 z-50 py-5;
-  @apply bg-slate-100/80 dark:bg-slate-900/80;
+  @apply bg-slate-400/60 dark:bg-slate-900/80;
   @apply text-slate-950/80 dark:text-slate-50;
   @apply backdrop-blur-sm saturate-100;
 }
@@ -48,7 +48,7 @@ main {
 
 footer {
   @apply py-5 text-sm;
-  @apply bg-slate-100/80 dark:bg-slate-900/80;
+  @apply bg-slate-400/60 dark:bg-slate-900/80;
 }
 
 article {
